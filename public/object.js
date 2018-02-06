@@ -35,11 +35,14 @@ coin.sides = 2
 coin.Newroll = function () {
   return (Math.floor(this.sides * Math.random() * 1) === 0) ? magicDice.roll() : 'WHAT'
 }
+console.log((coin.Newroll === 'WHAT') ? 'NO!' : 'YES')
+
 const magicDice = new Dice()
 magicDice.sides = 2
 magicDice.roll = function () {
   return (Math.floor(this.sides * Math.random() * 1) === 0) ? 'HELLO' : 'WHAT-WHAT'
 }
+console.log((magicDice !== 'WHAT-WHAT') ? Dice.roll() : 'STOP')
 console.log(Dice.roll())
 // coin.roll()
 // class Dice {
@@ -223,6 +226,10 @@ console.log(Dice.roll())
 // console.log(`${this.name} can see right through you!`);
 // return this;
 // }
+// }
+// function createSuperhuman(...mixins) {
+// const object = copy(Superhuman);
+// return mixin(object,...mixins);
 // }
 // mixin(superman,flight,superSpeed,xRayVision);
 // mixin(wonderwoman,flight,superSpeed);
